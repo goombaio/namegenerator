@@ -67,7 +67,7 @@ limitations under the License.
 [Coverage-URL]: https://codecov.io/gh/goombaio/namegenerator
 [GoReportCard-Image]: https://goreportcard.com/badge/github.com/goombaio/namegenerator
 [GoReportCard-URL]: https://goreportcard.com/report/github.com/goombaio/namegenerator
-[CII-Image]: https://bestpractices.coreinfrastructure.org/projects/2234/badge
-[CII-URL]: https://bestpractices.coreinfrastructure.org/projects/2234
+[CII-Image]: https://bestpractices.coreinfrastructure.org/projects/2237/badge
+[CII-URL]: https://bestpractices.coreinfrastructure.org/projects/2237
 [GoDoc-Image]: https://godoc.org/github.com/goombaio/namegenerator?status.svg
 [GoDoc-URL]: http://godoc.org/github.com/goombaio/namegenerator
