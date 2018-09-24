@@ -27,22 +27,27 @@ type Generator interface {
 	Generate() string
 }
 
-// RandomName ...
-type RandomName struct {
+// NameGenerator ...
+type NameGenerator struct {
 	random *rand.Rand
 }
 
 // Generate ...
-func (rn RandomName) Generate() string {
-	return fmt.Sprintf("%v-%v", ADJECTIVES[rn.random.Intn(len(ADJECTIVES))], NOUNS[rn.random.Intn(len(NOUNS))])
+func (rn *NameGenerator) Generate() string {
+	randomAdjective := ADJECTIVES[rn.random.Intn(len(ADJECTIVES))]
+	randomNoun := NOUNS[rn.random.Intn(len(NOUNS))]
+
+	randomName := fmt.Sprintf("%v-%v", randomAdjective, randomNoun)
+
+	return randomName
 }
 
-// NewGenerator ...
-func NewGenerator(seed int64) Generator {
-	name := &RandomName{
+// NewNameGenerator ...
+func NewNameGenerator(seed int64) Generator {
+	nameGenerator := &NameGenerator{
 		random: rand.New(rand.New(rand.NewSource(99))),
 	}
-	name.random.Seed(seed)
+	nameGenerator.random.Seed(seed)
 
-	return name
+	return nameGenerator
 }
